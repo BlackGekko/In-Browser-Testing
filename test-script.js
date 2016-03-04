@@ -67,22 +67,19 @@ function getBrowser()
 //WORK IN PROGRESS
 function logTester()
 {
-	//namePrompt
-	console.log('Please enter testers name');
-	var testerName = readline();
+	//new name prompt
+	var testerName = window.prompt('Please enter the name of the tester');
 	if(testerName.length > 0)
 	{
-		console.log('Thank You!');
-		//Black Gekko Development userID
-		console.log('Please enter your userID');
-		var userID = readline();
-		if(userID.length > 0)
+		console.log(testerName);
+		var gekkoID = window.prompt('Please enter your Black Gekko ID');
+		if(gekkoID.length > 0)
 		{
-			console.log('Thank You!');
+			console.log('Thank you!');
 		}
 		else
 		{
-			consoleError();
+			console.log('Not Gekko team');
 		}
 	}
 	else
