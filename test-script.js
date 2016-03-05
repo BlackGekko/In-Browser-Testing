@@ -64,13 +64,16 @@ function getBrowser()
 	console.log(appVersion);
 }
 
-//WORK IN PROGRESS
-function logTester()
+//WORK IN PROGRESS START
+var testerNames = [];
+
+function testerInfo()
 {
 	//new name prompt
 	var testerName = window.prompt('Please enter the name of the tester');
 	if(testerName.length > 0)
 	{
+		testerNames[0] = testerName;
 		console.log(testerName);
 		var gekkoID = window.prompt('Please enter your Black Gekko ID');
 		if(gekkoID.length > 0)
@@ -87,4 +90,4 @@ function logTester()
 		consoleError();
 	}
 }
-//WORK IN PROGRESS
+//WORK IN PROGRESS END
