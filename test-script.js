@@ -114,4 +114,3 @@ function errorMessageTest()
 		console.log(e.message);	//program error message
 	}
 }
-
