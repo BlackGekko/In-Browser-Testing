@@ -75,6 +75,7 @@ function testerInfo()
 	{
 		testerNames[0] = testerName;
 		console.log(testerName);
+		localStorage.setItem('TesterNames', JSON.stringify(testerNames));
 		var gekkoID = window.prompt('Please enter your Black Gekko ID');
 		if(gekkoID.length > 0)
 		{
@@ -90,4 +91,6 @@ function testerInfo()
 		consoleError();
 	}
 }
+
+var storedTesters = JSON.parse(localStorage.getItem('TesterNames'));
 //WORK IN PROGRESS END
