@@ -25,6 +25,15 @@ function testFail()
 {
 	console.log("Test(s) have failed");
 }
+function programError(message)
+{
+	this.name = 'programError';
+	this.message = message || 'Something seems to have gone wrong';
+	this.stack = (new Error()).stack;
+}
+
+programError.prototype = Object.create(Error.prototype);
+programError.prototype.constructor = programError;
 
 var codename = window.navigator.appCodeName;
 var appVersion = window.navigator.appVersion;
@@ -64,7 +73,6 @@ function getBrowser()
 	console.log(appVersion);
 }
 
-//WORK IN PROGRESS START
 var testerNames = [];
 
 function testerInfo()
@@ -93,4 +101,17 @@ function testerInfo()
 }
 
 var storedTesters = JSON.parse(localStorage.getItem('TesterNames'));
-//WORK IN PROGRESS END
+
+function errorMessageTest()
+{
+	try
+	{
+		throw new programError();
+	}
+	catch(e)
+	{
+		console.log(e.name);	//program error name
+		console.log(e.message);	//program error message
+	}
+}
+
