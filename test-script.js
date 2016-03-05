@@ -27,7 +27,7 @@ function testFail()
 }
 function programError(message)
 {
-	this.name = 'programError';
+	this.name = 'Error Code 1';
 	this.message = message || 'Something seems to have gone wrong';
 	this.stack = (new Error()).stack;
 }
