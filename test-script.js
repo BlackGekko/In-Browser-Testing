@@ -73,7 +73,7 @@ function testerInfo()
 	var testerName = window.prompt('Please enter the name of the tester');
 	if(testerName.length > 0)
 	{
-		testerNames[0] = testerName;
+		testerNames.push(testerName);
 		console.log(testerName);
 		localStorage.setItem('TesterNames', JSON.stringify(testerNames));
 		var gekkoID = window.prompt('Please enter your Black Gekko ID');
